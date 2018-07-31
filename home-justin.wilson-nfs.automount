@@ -1,0 +1,5 @@
+[Automount]
+Where=/home/justin.wilson/nfs
+
+[Install]
+WantedBy=graphical.target

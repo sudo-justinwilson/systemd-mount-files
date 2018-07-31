@@ -1,0 +1,16 @@
+[Unit]
+Description=This is the mount unit for the NFS share on ubuntu-fileserver
+#DefaultDependencies=no
+#After=systemd-tmpfiles-setup.service
+Requires=network.service 
+After=nfs-utils.service
+Conflicts=umount.target
+
+[Mount]
+#What=sunrpc
+What=ubuntu-fileserver:/tank/users/justin.wilson
+#Where=/var/lib/nfs/rpc_pipefs
+Where=/home/justin.wilson/nfs
+Type=nfs4
+x-systemd.automount=True
+

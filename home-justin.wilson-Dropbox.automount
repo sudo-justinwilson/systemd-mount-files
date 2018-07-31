@@ -1,0 +1,5 @@
+[Automount]
+Where=/home/justin.wilson/Dropbox
+
+[Install]
+WantedBy=graphical.target

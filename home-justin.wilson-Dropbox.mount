@@ -1,0 +1,16 @@
+[Unit]
+Description=This is the mount unit for the Dropbox shared folder
+#DefaultDependencies=no
+#After=systemd-tmpfiles-setup.service
+#Requires=network.service 
+After=graphical.target
+Conflicts=umount.target
+
+[Mount]
+#What=sunrpc
+What=Dropbox
+#Where=/var/lib/nfs/rpc_pipefs
+Where=/home/justin.wilson/Dropbox
+Type=vboxsf
+x-systemd.automount=True
+
